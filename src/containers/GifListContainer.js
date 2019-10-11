@@ -31,7 +31,7 @@ export default class GifListContainer extends Component {
       }
       else{
       this.setState({
-        gifs: gifsArray.data.slice(0,3)
+        gifs: gifsArray.data.slice(0,5)
       }, () => console.log(this.state.gifs))
     }
     })

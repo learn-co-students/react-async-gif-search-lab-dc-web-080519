@@ -22,11 +22,11 @@
 }
 
 .card {
-  background-color: gray;
+  background-color: #E8DCCF;
   padding: 5px;
   text-align: center;
   border-style: ridge;
-  border-width: 5px;
-  border-color: black;
+  border-width: 10px;
+  border-color: #6C3C18;
   margin: 5px;
 }
