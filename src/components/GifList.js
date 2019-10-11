@@ -2,16 +2,24 @@ import React from 'react'
 
 const GifList = (props) => {
 
+
   return (
-    <div className="col-sm">
       <ul className="giflist">
-       {props.gifs.map(gif => {
+       {(props.gifs === null ?
+        (<div className="noGifs">No Gifs Found!</div>) :
+         (props.gifs.map(gif => {
          return (
-           <li><img src={gif.images.original.url}/></li>
-         )
-       })}
+           <li>
+           <div className="card" key={gif.title}>
+            <div className="card-header">{gif.title}
+            </div>
+            <img src={gif.images.original.url} alt={gif.title}/>
+           </div>
+           </li>
+         )}
+       )))
+     }
       </ul>
-    </div>
   )
 }
 

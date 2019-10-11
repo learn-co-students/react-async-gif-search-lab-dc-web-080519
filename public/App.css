@@ -1,3 +1,32 @@
 .container {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.submitBtn {
+  background-color: blue;
+  color: white;
+}
+
+.noGifs {
+  background-color: red;
+  font-size: 50px;
+}
+
+.card-header {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.card {
+  background-color: gray;
+  padding: 5px;
+  text-align: center;
+  border-style: ridge;
+  border-width: 5px;
+  border-color: black;
+  margin: 5px;
 }

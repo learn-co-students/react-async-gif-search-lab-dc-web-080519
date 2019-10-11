@@ -24,9 +24,16 @@ export default class GifListContainer extends Component {
     fetch(this.returnUrl())
     .then(response => response.json())
     .then(gifsArray => {
+      if(gifsArray.message || gifsArray.data.length === 0) {
+        this.setState({
+          gifs: null
+        })
+      }
+      else{
       this.setState({
         gifs: gifsArray.data.slice(0,3)
       }, () => console.log(this.state.gifs))
+    }
     })
   }
 
@@ -40,7 +47,9 @@ export default class GifListContainer extends Component {
     return (
 
         <div className="container">
+          <div className="col-6">
           <GifList gifs={this.state.gifs}/>
+          </div>
           <GifSearch submitHandler={this.submitHandler} updateSearch={this.updateSearchTerm} />
         </div>
 

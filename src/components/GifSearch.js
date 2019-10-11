@@ -2,12 +2,11 @@ import React from 'react'
 
 const GifSearch = (props) => {
   return (
-    <div className="col-sm">
-      <form onSubmit={props.submitHandler}>
-        <label> Search Query:
-        <input type="text" onChange={props.updateSearch}/>
-        <input type="submit" value="Search GIFS!"/>
-        </label>
+    <div className="col-6">
+      <form className="form-group" onSubmit={props.submitHandler}>
+        <label> Enter a Search Term:</label>
+        <input type="text" className="form-control" id="searchQuery" onChange={props.updateSearch}/>
+        <input type="submit" onClick={props.submitHandler} type="button" className="btn btn-primary" value="Find GIFS"/>
       </form>
     </div>
   )
